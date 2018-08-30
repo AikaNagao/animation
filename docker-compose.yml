@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: animation_app
+    working_dir: /app
+    user: user
+    ports:
+      - "4200:4200"
+    volumes:
+      - /Users/aika-nagao/Documents/animation:/app
+    tty: true

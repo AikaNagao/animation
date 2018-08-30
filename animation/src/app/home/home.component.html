@@ -1,0 +1,19 @@
+<div
+  class="left"
+  [@flyInOut]="state"
+  (mouseenter)="leftselect()"
+  (click)="in()"
+  (@flyInOut.done)="openPage($event.toState)">
+</div>
+<div
+  class="right"
+  (mouseenter)="rightselect()"
+  (click)="out()">
+</div>
+<!-- <div [ngSwitch]="selectComponent">
+  <div *ngSwitchCase="day">
+  </div>
+  <div *ngSwitchCase="night">
+    <app-night></app-night>
+  </div>
+</div> -->
