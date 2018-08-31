@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { SunobjComponent } from './obj/sunobj/sunobj.component';
 import { MountainobjComponent } from './obj/mountainobj/mountainobj.component';
 import { AnimationService } from './service/animation.service';
+import { RainobjComponent } from './rainobj/rainobj.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AnimationService } from './service/animation.service';
     DayComponent,
     NightComponent,
     SunobjComponent,
-    MountainobjComponent
+    MountainobjComponent,
+    RainobjComponent
   ],
   imports: [
     BrowserModule,

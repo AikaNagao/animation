@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DayComponent implements OnInit {
 
-  state:string;
+  state:string = "hide";
 
   constructor() { }
 

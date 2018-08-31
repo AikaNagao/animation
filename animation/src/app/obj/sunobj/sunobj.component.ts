@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, state, style, animate, transition} from '@angular/animations';
+import { trigger, state, style, animate, transition, keyframes} from '@angular/animations';
 
 @Component({
   selector: 'app-sunobj',
@@ -8,20 +8,18 @@ import { trigger, state, style, animate, transition} from '@angular/animations';
   animations: [
     trigger('status', [
       state('hide', style({
-        opacity: 0,
-        transform: 'rotate(0)'
+        opacity: 0
       })),
       state('show', style({
-        opacity: 1,
-        transform: 'rotate(-180deg)'
       })),
       transition('hide => show', [
-        animate(2000)
-      ]),
-      transition('* => show', [
-        style({transform: 'rotate(-360deg)'}),
-        animate(3000)
-      ]),
+        animate(2000, keyframes([
+          style({opacity: 0, offset: 0}),
+          style({opacity: 0.5, transform: 'rotate(0deg)',offset: 0.3}),
+          style({opacity: 1, transform: 'rotate(180deg)',offset: 0.65,}),
+          style({opacity: 1, transform: 'rotate(360deg)', offset: 1.0}),
+        ]))
+      ])
     ])
   ]
 })

@@ -27,6 +27,7 @@ export class MountainobjComponent implements OnInit {
   state:string;
 
   ngOnInit() {
+    this.state="show"
   }
 
   sunstatuschange() {

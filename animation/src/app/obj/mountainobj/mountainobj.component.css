@@ -1,5 +1,7 @@
 div.mountainobj{
-  float:right;
+  position:fixed;
+  right:0;
+  bottom:-20%;
 }
 img{
   height:700px;
