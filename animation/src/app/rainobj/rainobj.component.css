@@ -3,5 +3,6 @@ div.rainobj{
   top:0
 }
 img{
+  position:absolute;
   opacity:0;
 }
